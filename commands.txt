@@ -1,0 +1,46 @@
+CREATE DATABASE online_test DEFAULT CHARACTER SET utf8;
+GRANT ALL ON online_test.* TO 'admin'@'localhost' IDENTIFIED BY 'admin123';
+GRANT ALL ON online_test.* TO 'admin'@'127.0.0.1' IDENTIFIED BY 'admin123';
+
+CREATE TABLE Admin (
+  a_id VARCHAR(50) NOT NULL,
+  a_name VARCHAR(80),
+  a_pw VARCHAR(50),
+  PRIMARY KEY(a_id)
+) ENGINE = InnoDB;
+
+
+CREATE TABLE User (
+  u_id VARCHAR(50) NOT NULL,
+  u_name VARCHAR(80),
+  u_pw VARCHAR(50),
+  u_email VARCHAR(80),
+  u_phone INT(10),
+  PRIMARY KEY(u_id)
+) ENGINE = InnoDB;
+
+
+CREATE TABLE Quant (
+  q_no INT(255) NOT NULL AUTO_INCREMENT,
+  q_name TEXT,
+  op1 TEXT,
+  op2 TEXT,
+  op3 TEXT,
+  op4 TEXT,
+  ans TEXT,
+  PRIMARY KEY(q_no)
+) ENGINE = InnoDB;
+
+
+CREATE TABLE Verbal (
+  q_no INT(255) NOT NULL AUTO_INCREMENT,
+  q_name TEXT,
+  op1 TEXT,
+  op2 TEXT,
+  op3 TEXT,
+  op4 TEXT,
+  ans TEXT,
+  PRIMARY KEY(q_no)
+) ENGINE = InnoDB;
+
+
